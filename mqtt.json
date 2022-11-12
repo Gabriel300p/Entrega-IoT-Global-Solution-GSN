@@ -1,0 +1,406 @@
+[
+    {
+        "id": "913149003e56e92d",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "ce7334698217aadc",
+        "type": "tab",
+        "label": "Flow 2",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "27ce30f0cb8c4328",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "localhost",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "3455e5dc063d511f",
+        "type": "ui_tab",
+        "name": "Principal",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "d6e5a675972fae6f",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "affad2ae9ae7fea1",
+        "type": "ui_group",
+        "name": "Vagas",
+        "tab": "3455e5dc063d511f",
+        "order": 1,
+        "disp": true,
+        "width": "9",
+        "collapse": false
+    },
+    {
+        "id": "c2a1f67d598fce53",
+        "type": "aedes broker",
+        "z": "913149003e56e92d",
+        "name": "",
+        "mqtt_port": 1883,
+        "mqtt_ws_bind": "port",
+        "mqtt_ws_port": "",
+        "mqtt_ws_path": "",
+        "cert": "",
+        "key": "",
+        "certname": "",
+        "keyname": "",
+        "dburl": "",
+        "usetls": false,
+        "x": 210,
+        "y": 160,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "a1b5b935896425bc",
+        "type": "mqtt out",
+        "z": "913149003e56e92d",
+        "name": "",
+        "topic": "TopicoTimesTamp",
+        "qos": "0",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "27ce30f0cb8c4328",
+        "x": 370,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "630a0eb2c4fccddb",
+        "type": "inject",
+        "z": "913149003e56e92d",
+        "name": "Vaga A disponivel",
+        "props": [
+            {
+                "p": "topic",
+                "vt": "str"
+            },
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "TopicoTimesTamp",
+        "payload": "A",
+        "payloadType": "str",
+        "x": 120,
+        "y": 280,
+        "wires": [
+            [
+                "a1b5b935896425bc"
+            ]
+        ]
+    },
+    {
+        "id": "771557999ec0991a",
+        "type": "inject",
+        "z": "913149003e56e92d",
+        "name": "Vaga B disponivel",
+        "props": [
+            {
+                "p": "topic",
+                "vt": "str"
+            },
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "TopicoTimesTamp",
+        "payload": "B",
+        "payloadType": "str",
+        "x": 130,
+        "y": 340,
+        "wires": [
+            [
+                "a1b5b935896425bc"
+            ]
+        ]
+    },
+    {
+        "id": "3d30aca00b82f596",
+        "type": "inject",
+        "z": "913149003e56e92d",
+        "name": "Ambas",
+        "props": [
+            {
+                "p": "topic",
+                "vt": "str"
+            },
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "TopicoTimesTamp",
+        "payload": "AB",
+        "payloadType": "str",
+        "x": 90,
+        "y": 400,
+        "wires": [
+            [
+                "a1b5b935896425bc"
+            ]
+        ]
+    },
+    {
+        "id": "edb4a2fca999e679",
+        "type": "inject",
+        "z": "913149003e56e92d",
+        "name": "Nenhuma",
+        "props": [
+            {
+                "p": "topic",
+                "vt": "str"
+            },
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "TopicoTimesTamp",
+        "payload": "X",
+        "payloadType": "str",
+        "x": 100,
+        "y": 460,
+        "wires": [
+            [
+                "a1b5b935896425bc"
+            ]
+        ]
+    },
+    {
+        "id": "2a8219f3622684f6",
+        "type": "debug",
+        "z": "ce7334698217aadc",
+        "name": "debug 3",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 180,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "177de8b1d837cff1",
+        "type": "mqtt in",
+        "z": "ce7334698217aadc",
+        "name": "",
+        "topic": "TopicoTimesTamp",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "27ce30f0cb8c4328",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 90,
+        "y": 300,
+        "wires": [
+            [
+                "2a8219f3622684f6",
+                "c9277720a288fd57"
+            ]
+        ]
+    },
+    {
+        "id": "16e2352dac6ecdb9",
+        "type": "debug",
+        "z": "ce7334698217aadc",
+        "name": "debug 4",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 400,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "c9277720a288fd57",
+        "type": "function",
+        "z": "ce7334698217aadc",
+        "name": "function 1",
+        "func": "if(msg.payload ==='A')\n    msg.payload ='Vaga A disponivel'; \nif (msg.payload === 'B')\n    msg.payload = 'Vaga B disponivel';\nif (msg.payload === 'AB')\n    msg.payload = 'Ambas as vagas disponiveis';\nif (msg.payload === 'X')\n    msg.payload = 'Nenhuma vaga disponivel';\n\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 240,
+        "y": 380,
+        "wires": [
+            [
+                "3186e161a5c7a0b2"
+            ]
+        ]
+    },
+    {
+        "id": "3186e161a5c7a0b2",
+        "type": "ui_text",
+        "z": "ce7334698217aadc",
+        "group": "affad2ae9ae7fea1",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Vaga disponivel",
+        "format": "{{msg.payload}}",
+        "layout": "row-center",
+        "className": "",
+        "x": 380,
+        "y": 280,
+        "wires": []
+    }
+]
